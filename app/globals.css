@@ -58,15 +58,14 @@ header.site{position:sticky;top:0;z-index:50;background:rgba(247,248,244,.95);ba
 
 /* --- Hero cinématique (plein écran, mot géant, photo/mesh en fond) --- */
 .hero-cine{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:center;background:#07140D;color:#fff;overflow:hidden}
+.hero-cine-img{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?q=80&w=1920&auto=format&fit=crop');background-size:cover;background-position:center;animation:heroShift 26s ease-in-out infinite alternate}
 .hero-cine::before{content:'';position:absolute;inset:0;background:
-  radial-gradient(1100px 700px at 14% 8%,rgba(11,107,58,.55),transparent 60%),
-  radial-gradient(900px 650px at 88% 18%,rgba(242,140,40,.30),transparent 55%),
-  radial-gradient(1200px 900px at 50% 100%,rgba(11,107,58,.4),transparent 60%),
-  linear-gradient(180deg,#07140D 0%,#0B1F15 55%,#07140D 100%);
-  animation:heroShift 22s ease-in-out infinite alternate}
-.hero-cine::after{content:'';position:absolute;inset:0;opacity:.35;mix-blend-mode:overlay;
+  radial-gradient(1100px 700px at 14% 10%,rgba(7,20,13,.35),transparent 60%),
+  linear-gradient(100deg,rgba(7,20,13,.97) 0%,rgba(7,20,13,.9) 32%,rgba(7,20,13,.55) 58%,rgba(7,20,13,.78) 100%),
+  linear-gradient(0deg,rgba(7,20,13,.9) 0%,transparent 30%,transparent 75%,rgba(7,20,13,.6) 100%)}
+.hero-cine::after{content:'';position:absolute;inset:0;opacity:.22;mix-blend-mode:overlay;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-@keyframes heroShift{0%{transform:scale(1) translate(0,0)}100%{transform:scale(1.08) translate(-1%, -1%)}}
+@keyframes heroShift{0%{transform:scale(1.04) translate(0,0)}100%{transform:scale(1.12) translate(-1.5%, -1%)}}
 .hero-cine-wrap{position:relative;z-index:2;max-width:1220px;margin:0 auto;padding:140px 24px 70px;width:100%}
 .hero-cine .eye{color:var(--coral);display:inline-flex;align-items:center;gap:10px}
 .hero-cine .eye::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--coral);display:inline-block}

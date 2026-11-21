@@ -6,6 +6,7 @@ export default function Home() {
   const feat = ['r2', 'b2', 't1'].map((id) => T.find((t: any) => t.id === id));
   return (<>
     <section className="hero-cine">
+      <div className="hero-cine-img" aria-hidden="true"></div>
       <div className="hero-cine-wrap">
         <span className="eye">Création de sites internet professionnels</span>
         <div className="hero-stack" aria-hidden="true">
