@@ -1,18 +1,25 @@
 import Link from 'next/link';
 import { T } from '@/lib/core';
-import Preview from '@/components/Preview';
 import { Card } from '@/components/Library';
 const ADV = [["On s'occupe de tout", 'Vous nous donnez vos informations, nous créons le site, la fiche Google et le WhatsApp Business.'], ['En ligne en 7 jours', 'Un modèle pensé pour votre métier, personnalisé à vos couleurs, parfait sur téléphone.'], ['Dès 190 €', "Un prix annoncé à l'avance, payable en plusieurs fois, avec une démonstration avant de payer."]];
 export default function Home() {
   const feat = ['r2', 'b2', 't1'].map((id) => T.find((t: any) => t.id === id));
   return (<>
-    <section className="hero"><div className="wrap hero-g">
-      <div><span className="eye" style={{ color: 'var(--coral)' }}>Création de sites internet professionnels</span>
-        <h1 style={{ marginTop: 18 }}>Votre activité mérite un site <b>à la hauteur</b> de vos ambitions.</h1>
+    <section className="hero-cine">
+      <div className="hero-cine-wrap">
+        <span className="eye">Création de sites internet professionnels</span>
+        <div className="hero-stack" aria-hidden="true">
+          <span>On tape une recherche.</span>
+          <span>On tombe sur le web.</span>
+          <span>On vous trouve.</span>
+          <span>Vous êtes partout.</span>
+        </div>
+        <h1 className="sr">On tape une recherche. On tombe sur le web. On vous trouve. Vous êtes partout : votre entreprise mérite un site à la hauteur de ses ambitions.</h1>
         <p className="lead">Créez une présence digitale professionnelle en quelques étapes. Découvrez nos modèles, choisissez votre style et donnez une nouvelle dimension à votre entreprise.</p>
-        <div className="cta"><Link href="/modeles" className="btn b-coral">Découvrir les modèles</Link><Link href="/creer" className="btn b-white">Créer mon site</Link></div></div>
-      <div className="mock" aria-hidden="true"><div className="lap"><Preview id="r2" thumb height={320} /></div><div className="ph"><Preview id="r2" mobile thumb height={288} /></div></div>
-    </div></section>
+        <div className="cta"><Link href="/modeles" className="btn b-coral">Découvrir les modèles</Link><Link href="/creer" className="btn b-white">Créer mon site</Link></div>
+      </div>
+      <div className="hero-scroll" aria-hidden="true"></div>
+    </section>
     <section className="sec"><div className="wrap"><div className="head"><span className="eye">Pourquoi WEBIKA</span><h2>Simple, rapide, à votre image.</h2></div>
       <div className="g3">{ADV.map((a, i) => <div className="adv" key={i}><span className="n">0{i + 1}</span><h3>{a[0]}</h3><p>{a[1]}</p></div>)}</div></div></section>
     <section className="sec" style={{ background: 'var(--soft)' }}><div className="wrap"><div className="head"><span className="eye">Nos modèles</span><h2>Un aperçu de la bibliothèque.</h2><p>Trois modèles parmi cinquante. Ouvrez une démonstration pour voir le site complet.</p></div>
