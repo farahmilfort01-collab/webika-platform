@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { T } from '@/lib/core';
 import { Card } from '@/components/Library';
+import Typewriter from '@/components/Typewriter';
 const ADV = [["On s'occupe de tout", 'Vous nous donnez vos informations, nous créons le site, la fiche Google et le WhatsApp Business.'], ['En ligne en 7 jours', 'Un modèle pensé pour votre métier, personnalisé à vos couleurs, parfait sur téléphone.'], ['Dès 190 €', "Un prix annoncé à l'avance, payable en plusieurs fois, avec une démonstration avant de payer."]];
 export default function Home() {
   const feat = ['r2', 'b2', 't1'].map((id) => T.find((t: any) => t.id === id));
@@ -9,13 +10,8 @@ export default function Home() {
       <div className="hero-cine-img" aria-hidden="true"></div>
       <div className="hero-cine-wrap">
         <span className="eye">Création de sites internet professionnels</span>
-        <div className="hero-stack" aria-hidden="true">
-          <span>On tape une recherche.</span>
-          <span>On tombe sur le web.</span>
-          <span>On vous trouve.</span>
-          <span>Vous êtes partout.</span>
-        </div>
-        <h1 className="sr">On tape une recherche. On tombe sur le web. On vous trouve. Vous êtes partout : votre entreprise mérite un site à la hauteur de ses ambitions.</h1>
+        <Typewriter text="Votre entreprise mérite sa place sur Internet." />
+        <p className="sr">Votre entreprise mérite sa place sur Internet.</p>
         <p className="lead">Créez une présence digitale professionnelle en quelques étapes. Découvrez nos modèles, choisissez votre style et donnez une nouvelle dimension à votre entreprise.</p>
         <div className="cta"><Link href="/modeles" className="btn b-coral">Découvrir les modèles</Link><Link href="/creer" className="btn b-white">Créer mon site</Link></div>
       </div>
